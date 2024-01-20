@@ -2,9 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+#thePlayer {
+  position: absolute;
+  inset: auto auto 3vh auto;
+}
+
+#player1 {
+  position: absolute;
+  inset: auto auto 3vh 3vh;
+}
+
+#player2 {
+  position: absolute;
+  inset: auto auto auto 3vh;
+}
+
+#player3 {
+  position: absolute;
+  inset: 3vh auto auto 3vh;
+}
+
+#player4 {
+  position: absolute;
+  inset: 3vh auto auto;
+}
+
+#player5 {
+  position: absolute;
+  inset: 3vh 3vh auto auto;
+}
+
+#player6 {
+  position: absolute;
+  inset: auto 3vh auto auto;
+}
+
+#player7 {
+  position: absolute;
+  inset: auto 3vh 3vh auto;
+}
+
+.deck-down .card{
+  inset: 0 auto 0 0;
+  position: absolute;
+  /* transform: rotateX(80deg); */
+}
+
+.deck-up .card{
+  inset: 0 0 0 auto;
+  position: absolute;
+  /* transform: rotateX(80deg); */
+}
+
+
+.player .card{
+  position: relative;
+}
+
 .card {
-  height: 200px;
-  width: 135px;
+  height: 10em;
+  width: 6.5em;
 
   font-family: 'Noto Serif', serif;
 
@@ -15,7 +72,7 @@
 .card-inner {
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
+  border-radius: 1em;
 
   position: absolute;
   
@@ -24,6 +81,10 @@
 }
 
 .card:hover .card-inner {
+  transform: rotateY(-180deg);
+}
+
+.view {
   transform: rotateY(-180deg);
 }
 
@@ -40,15 +101,15 @@
   justify-content: center;
   align-items: center;
 
-  border: 5px solid white;
-  border-radius: 1rem;
+  border: .1em solid white;
+  border-radius: calc(1em / 3);
   
-  font-size: 4rem;
+  font-size: 3em;
+  
+  transform: rotateY(180deg);
 }
 
 .card-back {
-  border: 5px solid white;
-  border-radius: 1rem;
-
-  transform: rotateY(180deg);
+  border: .3em solid white;
+  border-radius: 1em;
 }
